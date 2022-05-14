@@ -1,0 +1,23 @@
+{
+  "name": "unithelp",
+  "version": "1.0.0",
+  "description": "Unithelp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.9",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^6.0.43",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "alpinejs": "^3.10.2"
+  }
+}
