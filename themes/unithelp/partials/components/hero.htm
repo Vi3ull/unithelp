@@ -1,0 +1,42 @@
+<section class="rounded-bl-[300px] bg-gradient-to-r from-accent to-secondary-accent lg:pt-[205px] pb-[75px]">
+  <div class="container grid md:grid-cols-2">
+
+    <div class="flex flex-col pt-[50px] lg:pr-[50px]">
+      <div class="font-sans text-white line after:my-14">
+        <div class="font-black text-5xl text-white leading-[3.625rem]">
+          Not The Best, but Trying Giving the Best
+        </div>
+        <div class="font-normal text-xl text-white leading-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa elementum eu praesent a sit mi nisl tincidunt consequat. At turpis facilisis semper neque
+        </div>
+      </div>
+      <form class="flex w-full max-w-[400px] h-[70px] bg-white rounded-full relative">
+        <input type="email" placeholder="Enter Your Email Address" class="rounded-full absolute inset-0 pl-8">
+        <button type="submit" class="btn bg-active absolute top-[8px] right-[8px] bottom-[8px]">
+          <span class="hidden lg:inline-flex">Get Started</span>
+          {% partial 'common/icon' class="sm:hidden fill-transparent stroke-current w-6 h-6" icon="arrow-right" %}
+        </button>
+      </form>
+    </div>
+
+    <div class="hidden md:block h-[630px]">
+      <div class="absolute w-full md:w-1/2 right-0 overflow-hidden">
+        <div class="swiper container">
+          <ul class="swiper-wrapper pb-[130px]">
+            {% for i in range(1, 3) %}
+            <li class="swiper-slide w-[305px] h-[590px] bg-zinc-75 border-white border-[20px] rounded-[40px] box-content overflow-hidden">
+              <div class="flex flex-col h-full overflow-auto">
+                <img src="https://picsum.photos/305/343?random={{ loop.index }}"" alt="" class="">
+                <div class="font-sans font-normal text-sm text-secondary-dark leading-[22px] tracking-[1px] px-7 py-6">
+                  Et sollicitudin habitasse id elit. Tempus enim pharetra facilisi purus, fermentum id enim. Gravida nisi nibh ipsum commodo, sodales ac. Morbi leo odio a nec ipsum orci. id enim. Gravida nisi nibh ipsum commodo, sodales ac. Morbi leo odio a nec ipsum orci. 
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>

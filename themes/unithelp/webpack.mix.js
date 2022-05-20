@@ -2,6 +2,8 @@ const path = require('path');
 const mix = require('laravel-mix')
 require('dotenv').config({ path: path.resolve(__dirname, './../../.env') })
 
+mix.copy('./src/img', 'assets/img')
+
 const arJsPage = [
     'src/js/app.js',
 ]
@@ -36,6 +38,8 @@ mix.setPublicPath('assets')
 mix.setResourceRoot('/themes/' + process.env.ACTIVE_THEME + '/assets')
 
 mix.disableNotifications()
+
+mix.version()
 
 mix.browserSync({
     proxy: process.env.APP_URL,

@@ -1,3 +1,65 @@
 @tailwind base;
+
+@layer base {
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  input[type='number'],
+  input[type='url'],
+  input[type='date'],
+  input[type='datetime-local'],
+  input[type='month'],
+  input[type='week'],
+  input[type='time'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='checkbox'],
+  input[type='radio'],
+  select,
+  select[multiple],
+  textarea {
+    @apply placeholder:text-stone border-none font-sans text-sm text-secondary-dark leading-5 tracking-wide focus:ring-2 focus:ring-offset-0 focus:ring-active
+  }
+}
+
 @tailwind components;
+
+@layer components {
+  .line {
+    @apply after:block after:w-1/5 after:h-[1px] after:bg-white;
+  }
+
+  .btn {
+    @apply p-3 sm:px-8 font-sans font-extrabold text-base text-white tracking-wider rounded-[100px] flex items-center;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply rounded-full bg-transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-accent hover:bg-active;
+  }
+
+  .swiper {
+    @apply relative mx-auto;
+  }
+  
+  .swiper-wrapper {
+    @apply relative w-full h-full flex box-content;
+  }
+  
+  .swiper-slide {
+    @apply flex-shrink-0 relative;
+  }
+
+  /* .swiper .swiper-slide-active {
+    @apply z-20;
+  }  */
+}
+
 @tailwind utilities;
