@@ -1,3 +1,5 @@
+let plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: [
     'layouts/**/*.{htm,js}',
@@ -44,9 +46,21 @@ module.exports = {
         },  
         // 'accent-gradient': 'linear-gradient(96.61deg, #44CC88 2.13%, #5FD299 96.62%)',
       },
+      transitionProperty: {
+        'max-wh': 'max-width, max-height',
+      },
+      maxWidth: {
+        'screen': '100vh',
+      }  
     },
   },
   plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant('carousel-inited', '&.carousel--inited');
+      addVariant('slide-active', '&.carousel-slide-active');
+      addVariant('slide-next', '&.carousel-slide-next');
+      addVariant('slide-prev', '&.carousel-slide-prev');
+    }),
     require('@tailwindcss/forms'),
   ],
 }

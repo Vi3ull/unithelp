@@ -14,19 +14,19 @@
         <input type="email" placeholder="Enter Your Email Address" class="rounded-full absolute inset-0 pl-8">
         <button type="submit" class="btn bg-active absolute top-[8px] right-[8px] bottom-[8px]">
           <span class="hidden lg:inline-flex">Get Started</span>
-          {% partial 'common/icon' class="sm:hidden fill-transparent stroke-current w-6 h-6" icon="arrow-right" %}
+          {% partial 'common/icon' class="sm:hidden fill-transparent stroke-current stroke-2 w-6 h-6" icon="arrow-right" %}
         </button>
       </form>
     </div>
-
+    
     <div class="hidden md:block h-[630px]">
       <div class="absolute w-full md:w-1/2 right-0 overflow-hidden">
-        <div class="swiper container">
-          <ul class="swiper-wrapper pb-[130px]">
+        <div class="hero-carousel carousel js-carousel carousel-inited:pb-[130px] scrollbar container">
+          <ul class="carousel__wrapper js-carousel-wrapper">
             {% for i in range(1, 3) %}
-            <li class="swiper-slide w-[305px] h-[590px] bg-zinc-75 border-white border-[20px] rounded-[40px] box-content overflow-hidden">
-              <div class="flex flex-col h-full overflow-auto">
-                <img src="https://picsum.photos/305/343?random={{ loop.index }}"" alt="" class="">
+            <li class="carousel__slide js-carousel-slide transition duration-700 w-[305px] h-[590px] bg-zinc-50 slide-active:bg-zinc-75 border-white border-[20px] rounded-[40px] mr-[60px] box-content overflow-hidden">
+              <div class="relative flex flex-col h-full overflow-auto after:block after:w-[115px] after:h-6 after:rounded-[10px] after:bg-white after:absolute after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2">
+                <img src="https://picsum.photos/305/343?random={{ loop.index }}"" alt="">
                 <div class="font-sans font-normal text-sm text-secondary-dark leading-[22px] tracking-[1px] px-7 py-6">
                   Et sollicitudin habitasse id elit. Tempus enim pharetra facilisi purus, fermentum id enim. Gravida nisi nibh ipsum commodo, sodales ac. Morbi leo odio a nec ipsum orci. id enim. Gravida nisi nibh ipsum commodo, sodales ac. Morbi leo odio a nec ipsum orci. 
                 </div>
@@ -37,6 +37,6 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 </section>

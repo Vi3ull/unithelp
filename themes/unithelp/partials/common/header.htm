@@ -1,3 +1,49 @@
-<header class="">
+<header 
+  class="fixed left-0 right-0 z-50"
+  x-data="dropdown"
+>
+  <div
+    class="max-w-[50px] max-h-[50px] w-screen h-screen bg-white rounded-bl-[100px] ml-auto mr-0 transition-all duration-300 ease-linear"
+    :class="open ? 'max-w-screen max-h-screen' : ''"
+  > 
+    <a 
+      href="#" 
+      class="mr-0 ml-auto pt-2 pr-2 pb-4 pl-4 menu-toggle" 
+      :class="open ? 'menu-toggle--active' : ''"
+      @click="toggle"
+    > 
+      <span class="menu-toggle__icon"></span>
+    </a>
+    <div 
+      class="container" 
+      :class="open ? '' : 'hidden'"
+    >
+      <div 
+        class="" 
+      >
+        
+        <div>
 
+        </div>  
+        <nav 
+          class="" 
+        >
+          <ul class="flex flex-col">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>
